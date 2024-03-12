@@ -1,6 +1,5 @@
 
-		<div class="wrapper d-flex align-items-stretch">
-          
+	<div class="wrapper d-flex align-items-stretch">
 			<nav id="sidebar">
 				<div class="p-4 pt-5">
 		  		<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
@@ -11,16 +10,23 @@
                 <li>
                     <a href="#">Home 1</a>
                 </li>
-                <li>
-                    <a href="#">Home 2</a>
-                </li>
-                <li>
-                    <a href="#">Home 3</a>
-                </li>
+               
 	            </ul>
 	          </li>
 	          <li>
-	              <a href="#">About</a>
+	              <a href="{{ url('/student-page') }}">Student</a>
+	          </li>
+	          <li>
+	              <a href="{{ url('/teacher-page') }}">Teacher</a>
+	          </li>
+	          <li>
+	              <a href="{{url('/course-page')}}">Courses</a>
+	          </li>
+	          <li>
+	              <a href="#">Enrollment</a>
+	          </li>
+	          <li>
+	              <a href="#">Payment</a>
 	          </li>
 	          <li>
               <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>

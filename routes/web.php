@@ -1,17 +1,40 @@
 <?php
 
-use App\Http\Controllers\DemoController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DemoController;
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\TeacherController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
-Route::get('/',[DemoController::class,'index']);
+///Student info here
+Route::get('/',[StudentController::class,'index']);
+Route::get('/student-page',[StudentController::class,'studentpage']);
+Route::post('/student-create',[StudentController::class,'studentcreate']);
+Route::get('/student-list',[StudentController::class,'studentlist']);
+Route::post('/student-ID',[StudentController::class,'studentByID']);
+Route::post('/student-delete',[StudentController::class,'studentdelete']);
+Route::post('/student-update',[StudentController::class,'studentUpdate']);
+
+
+  ///Teacher info here
+Route::get('/teacher-page',[TeacherController::class,'teacherpage']);
+Route::post('/teacher-create',[TeacherController::class,'teachercreate']);
+Route::post('/teacher-delete',[TeacherController::class,'teacherdelete']);
+Route::get('/teacher-list',[TeacherController::class,'teacherlist']);
+Route::post('/teacher-update',[TeacherController::class,'teacherUpdate']);
+Route::post('/teacher-ID',[TeacherController::class,'teacherByID']);
+
+
+  ///Course route info here
+Route::get('/course-page',[CourseController::class,'coursepage']);
+Route::post('/course-create',[CourseController::class,'coursecreate']);
+Route::get('/course-list',[CourseController::class,'courselist']);
+Route::post('/course-delete',[CourseController::class,'coursedelete']);
+Route::post('/course-update',[CourseController::class,'courseupdate']);
+Route::post('/course-ID',[CourseController::class,'courseByID']);
+
+
+
+
+
