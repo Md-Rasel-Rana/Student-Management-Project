@@ -23,6 +23,9 @@
 	              <a href="{{url('/course-page')}}">Courses</a>
 	          </li>
 	          <li>
+	              <a href="{{url('/batch-page')}}">Batch</a>
+	          </li>
+	          <li>
 	              <a href="#">Enrollment</a>
 	          </li>
 	          <li>

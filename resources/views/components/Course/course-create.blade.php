@@ -50,7 +50,7 @@
                 });
 
                 if(res.status === 201 && res.data.status === 'success'){
-                    document.getElementById("save-form").reset();
+                    document.getElementById("update-form").reset();
                     successToast("Request Created Successfully!")
                     await getList();
                 }
