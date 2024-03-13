@@ -4,10 +4,10 @@
         <div class="card px-5 py-5">
             <div class="row justify-content-between ">
                 <div class="align-items-center col">
-                    <h4>Batch</h4>
+                    <h4>Enrollment Students </h4>
                 </div>
                 <div class="align-items-center col">
-                    <button data-bs-toggle="modal" data-bs-target="#create-modal" class="float-end btn  m-0 bg-gradient-primary">Create Batch</button>
+                    <button data-bs-toggle="modal" data-bs-target="#create-modal" class="float-end btn  m-0 bg-gradient-primary">Create Enrollment Students</button>
                 </div>
             </div>
             <hr class="bg-dark "/>
@@ -15,9 +15,10 @@
                 <thead>
                 <tr class="bg-light">
                     <th>No</th>
-                    <th>Batch Name</th>
-                    <th>Batch Start </th>
-                    <th>Course Name </th>
+                    <th>Student Name</th>
+                    <th>Enroll Number</th>
+                    <th>Enroll Start Date </th>
+                    <th>Enrollment Fee </th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -37,7 +38,7 @@
     
     async function getList() {
 
-        let res=await axios.get("/batch-list");
+        let res=await axios.get("/enrollment-list");
         let tableList=$("#tableList");
         let tableData=$("#tableData");
     
@@ -47,9 +48,11 @@
         res.data.forEach(function (item,index) {
             let row=`<tr>  
                         <td>${index+1}</td>
-                        <td>${item['batch_name']}</td>
-                        <td>${item['start_date']}</td>
-                        <td>${item.course['name']}</td>
+                        <td>${item.student['name']}</td>
+                        
+                        <td>${item['enroll_no']}</td>
+                        <td>${item['enroll_date']}</td>
+                        <td>${item['fee']}</td>
                         <td>
                             <button  data-id="${item['id']}" class="btn editBtn btn-sm btn-success">Edit</button>
                             <button  data-id="${item['id']}" class="btn deleteBtn btn-sm btn-danger">Delete</button>

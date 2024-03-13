@@ -4,6 +4,7 @@ use App\Http\Controllers\BatchController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\EnrollmentController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
 
@@ -43,6 +44,15 @@ Route::get('/batch-list',[BatchController::class,'batchlist']);
 Route::post('/batch-delete',[BatchController::class,'batchdelete']);
 Route::post('/batch-ID',[BatchController::class,'batchById']);
 Route::post('/batch-update',[BatchController::class,'batchupdate']);
+
+
+///Enrollment web route info here
+Route::get('/enrollment-page',[EnrollmentController::class,'enrollmentpage']);
+Route::post('/enrollment-create',[EnrollmentController::class,'enrollmentcreate']);
+Route::get('/enrollment-list',[EnrollmentController::class,'enrollmentlist']);
+Route::post('/enrollment-delete',[EnrollmentController::class,'enrollmentdelete']);
+
+
      
  
 

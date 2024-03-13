@@ -21,7 +21,7 @@ class BatchController extends Controller
             'message'=>'Batch Created Successfully']);
     }
     public function batchlist(){
-        return Batch::all();
+        return Batch::with('course')->get();
     }
    
     public function batchdelete(Request $request){

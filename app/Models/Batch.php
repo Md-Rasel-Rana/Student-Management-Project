@@ -9,4 +9,8 @@ class Batch extends Model
 {
     use HasFactory;
     protected $fillable = ['batch_name','start_date','course_id']; // 设置批量赋值的字段
+
+    public function course(){
+        return $this->belongsTo(Course::class);
+    }
 }

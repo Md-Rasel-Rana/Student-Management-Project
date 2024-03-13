@@ -26,7 +26,7 @@
 	              <a href="{{url('/batch-page')}}">Batch</a>
 	          </li>
 	          <li>
-	              <a href="#">Enrollment</a>
+	              <a href="{{ url('/enrollment-page') }}">Enrollment</a>
 	          </li>
 	          <li>
 	              <a href="#">Payment</a>
